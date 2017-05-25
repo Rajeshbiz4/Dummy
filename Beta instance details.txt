@@ -1,0 +1,20 @@
+---------- EC2 -------------
+ip address: 52.44.115.101
+ssh key: aliquotBeta_ppk.ppk
+Passphrase: AquaBeta130117
+
+
+------------ RDS ------------
+end point: aliquotbeta.c4vrezyynkrd.us-east-1.rds.amazonaws.com:5432
+database name: aliquotbeta
+master user pwd: DYWNyvBPD6saWrPZ
+master user name: betamaster
+
+-----------------------------
+
+psql --host aliquotbeta.c4vrezyynkrd.us-east-1.rds.amazonaws.com --port 5432 --username betamaster --dbname aliquotbeta
+
+psql -h aliquotbeta.c4vrezyynkrd.us-east-1.rds.amazonaws.com -p 5432 -U betamaster aliquotbeta
+
+
+pg_dump -Fc --host aliquotbeta.c4vrezyynkrd.us-east-1.rds.amazonaws.com --port 5432 --username betamaster --dbname aliquotbeta> db_backup.sql
